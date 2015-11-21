@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.textocat.textokit.examples</groupId>
+    <artifactId>textokit-getting-started</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>TextoKit example in Getting Started</name>
+
+    <dependencies>
+        <!-- API that you will use in your app -->
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-lemmatizer-api</artifactId>
+            <version>${textokit.version}</version>
+        </dependency>
+        <!-- analyzer implementations -->
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-tokenizer-simple</artifactId>
+            <version>${textokit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-sentence-splitter-heuristic</artifactId>
+            <version>${textokit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-morph-dictionary-opencorpora</artifactId>
+            <version>${textokit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-pos-tagger-opennlp</artifactId>
+            <version>${textokit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-lemmatizer-dictionary-sim</artifactId>
+            <version>${textokit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- models, dictionaries, etc. -->
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-dictionary-opencorpora-resource</artifactId>
+            <classifier>rnc</classifier>
+            <version>0.1-20140407-1</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.textocat.textokit.core</groupId>
+            <artifactId>textokit-pos-tagger-opennlp-model</artifactId>
+            <classifier>rnc1M-8cat</classifier>
+            <scope>runtime</scope>
+            <version>0.1-20151116-1</version>
+        </dependency>
+        <!-- logging implementation -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>textocat.artifactory</id>
+            <url>http://corp.textocat.com/artifactory/oss-repo</url>
+            <name>Textocat Open-Source Repository</name>
+        </repository>
+    </repositories>
+
+    <properties>
+        <!-- define in properties block of POM -->
+        <textokit.version>0.1-SNAPSHOT</textokit.version>
+    </properties>
+</project>
